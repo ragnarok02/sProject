@@ -1,10 +1,6 @@
 import java.io.File;
 import java.io.FileOutputStream;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -30,7 +26,7 @@ public class ExcelWriter {
 			Cell cell = row.createCell(columnIndex++);
 			cell.setCellValue(colTitle);
 		}
-		
+		// this file will be saved on our local server
 		FileOutputStream out = new FileOutputStream(
 			new File("C:/Chris/Projects/Performance-Reports-Generator/data/template.xlsx"));
 		
